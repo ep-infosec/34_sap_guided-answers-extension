@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+h1 span {
+    font-weight: 600;
+}
+
+.container {
+    width: 25%;
+    margin-top: 10px;
+    position: fixed;
+    overflow: visible;
+}
+
+.vertical-line {
+    width: 1px;
+    margin-left: 50%;
+    height: 10px;
+    background: var(--vscode-editorWidget-border);
+    z-index: -1;
+    margin-top: -10px;
+}
+
+.timeline-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    clear: both;
+    position: relative;
+    float: none;
+    flex-direction: column;
+}
+
+.timeline-content {
+    width: 100%;
+    margin: 0px 10px 10px 0px;
+    border-radius: 3px;
+    color: var(--vscode-foreground);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background: var(--vscode-menu-background);
+    border: 1px solid var(--vscode-editorWidget-border);
+}
+
+.timeline-content:hover {
+    cursor: pointer;
+    border: 1px solid var(--vscode-focusBorder, #007fd4);
+}
+
+.timeline-content-bottom-border {
+    border-bottom: 3px solid var(--vscode-focusBorder, #007fd4);
+    pointer-events: none;
+}
+
+.timeline-content-bottom-border:hover {
+    border-bottom: 3px solid var(--vscode-focusBorder, #007fd4);
+    pointer-events: none;
+}
+
+.timeline-content-bottom-border-not-solved {
+    border-bottom: 3px solid var(--vscode-notificationsErrorIcon-foreground, #f14c4c);
+    pointer-events: none;
+}
+
+.timeline-content-bottom-border-not-solved :hover {
+    pointer-events: none;
+}
+
+.timeline__path {
+    display: inline-block;
+    color: var(--vscode-menu-foreground, #cccccc);
+    padding: 10px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    font-style: normal;
+}
+
+.timeline-content-title-large {
+    display: block;
+    text-align: left;
+}
+.timeline-content-title-small {
+    display: none;
+    text-align: left;
+}
+
+@media only screen and (max-width: 625px) {
+    .timeline-content-title-large {
+        display: none;
+    }
+    .timeline-content-title-small {
+        display: block;
+    }
+    .timeline-content {
+        align-items: center;
+    }
+    .vertical-line {
+        left: 46%;
+    }
+    .container {
+        width: 40px;
+    }
+    .timeline__path {
+        width: 34px;
+        text-align: center;
+    }
+}

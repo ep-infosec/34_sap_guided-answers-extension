@@ -1,0 +1,23 @@
+export {
+    updateGuidedAnswerTrees,
+    updateActiveNode,
+    selectNode,
+    goToPreviousPage,
+    goToAllAnswers,
+    restartAnswer,
+    executeCommand,
+    setActiveTree,
+    searchTree,
+    setQueryValue,
+    webviewReady,
+    getBetaFeatures,
+    sendFeedbackOutcome,
+    sendFeedbackComment,
+    guideFeedback,
+    setProductFilters,
+    setComponentFilters,
+    resetFilters,
+    setPageSize,
+    feedbackStatus,
+    feedbackResponse
+} from '@sap/guided-answers-extension-types';
